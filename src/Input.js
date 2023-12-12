@@ -1,8 +1,8 @@
-import colorNames from 'colornames'
+import colorNames from 'colornames';
 
-const Input = ( {colorValue, setColorValue, setHexValue }) => {
+const Input = ({ colorValue, setColorValue, setHexValue }) => {
     return (
-        <form onSubmit={(e) => e.preventDefault()}>
+        <form onSubmit={(e) => e.preventDefault()} data-testid="input"> {}
             <label>Add Color name:</label>
             <input
                 autoFocus
@@ -14,10 +14,9 @@ const Input = ( {colorValue, setColorValue, setHexValue }) => {
                     setColorValue(e.target.value);
                     setHexValue(colorNames(e.target.value));
                 }}
-
-                />
+            />
         </form>
-    )
-}
+    );
+};
 
-export default Input
+export default Input;
